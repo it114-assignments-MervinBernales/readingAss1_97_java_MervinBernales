@@ -42,7 +42,7 @@ public class Account {
 	public void setAnnualInterestRate(double _AnnualInterestRate) {
 	    annualInterestRate = _AnnualInterestRate;
 	}
-	public Date setDateCreated() {
+	public Date getDateCreated() {
 		java.util.Date dateCreated = new java.util.Date();
 	    return dateCreated ;
 	}
