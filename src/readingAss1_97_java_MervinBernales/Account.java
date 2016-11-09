@@ -14,7 +14,11 @@ public class Account {
 	private double balance;
 	private double annualInterestRate;
 	private Date dateCreated = new java.util.Date();
-	Account(){}
+	Account(){
+		id = 0;
+		balance = 0;
+		annualInterestRate = 0;
+	}
 	Account(int _Id, double _Balance) {
 	    id = _Id;
 	    balance = _Balance;
