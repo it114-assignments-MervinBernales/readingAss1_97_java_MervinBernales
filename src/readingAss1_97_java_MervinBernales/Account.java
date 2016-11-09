@@ -13,7 +13,7 @@ public class Account {
 	private int id;
 	private double balance;
 	private double annualInterestRate;
-	private Date dateCreated;
+	private Date dateCreated = new java.util.Date();
 	Account(){}
 	Account(int _Id, double _Balance) {
 	    id = _Id;
@@ -40,22 +40,21 @@ public class Account {
 	    balance = _Balance;
 	}
 	public void setAnnualInterestRate(double _AnnualInterestRate) {
-	    annualInterestRate = _AnnualInterestRate;
+	    annualInterestRate = _AnnualInterestRate/100;
 	}
 	public Date getDateCreated() {
-		java.util.Date dateCreated = new java.util.Date();
 	    return dateCreated ;
 	}
-	double getMonthlyInterestRate() {
+	public double getMonthlyInterestRate() {
 	    return annualInterestRate/12;
 	}
-	double getMonthlyInterest(){
+	public double getMonthlyInterest(){
 		return (annualInterestRate/12)*balance;
 	}
-	double withdraw(double amount) {
+	public double withdraw(double amount) {
 	    return balance = balance - amount;
 	}
-	double deposit(double amount) {
+	public double deposit(double amount) {
 	    return balance = balance + amount;   
 	}
 }
